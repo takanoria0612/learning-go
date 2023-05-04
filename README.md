@@ -13,7 +13,7 @@
 - `pointerCase2.go`: 値を変更するためにポインタレシーバを使用する方法を示すプログラム。
 
 ### 'pointerCase1.go'
-    ```golang
+    ```Go
     package main
 
     import "fmt"
