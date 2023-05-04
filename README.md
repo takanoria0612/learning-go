@@ -13,7 +13,7 @@
 - `pointerCase2.go`: 値を変更するためにポインタレシーバを使用する方法を示すプログラム。
 
 ### 'pointerCase1.go'
-    ```Go
+    
     package main
 
     import "fmt"
@@ -30,4 +30,4 @@
         fmt.Println("y address:\t", &y)
     }
 
-    ```
+    
