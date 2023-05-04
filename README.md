@@ -86,7 +86,7 @@ func main() {
 ```
 main関数は、このプログラムのエントリーポイントです。この関数では、User構造体のインスタンスを作成しています。
 <br>
-FirstName、LastName、PhoneNumberフィールドには、それぞれ値が設定されていますが、`BirthDate`フィールドには値が設定されていません。`BirthDate`の値が初期化されていないため、ゼロ値である`0001-01-01 00:00:00 +0000 UTC`が表示されます。
+`FirstName`、`LastName`、`PhoneNumber`フィールドには、それぞれ値が設定されていますが、`BirthDate`フィールドには値が設定されていません。`BirthDate`の値が初期化されていないため、ゼロ値である`0001-01-01 00:00:00 +0000 UTC`が表示されます。
 
 最後に、`log.Println()`関数を使用して、User構造体の`FirstName`、`LastName`、`BirthDate`フィールドを出力しています。
 
