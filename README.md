@@ -1,18 +1,17 @@
 # Learning Go
 
-This is a Go project for learning the basics of the Go programming language. The project contains several packages, including the `pointer` package, which contains two files:
+これはGo言語の基本を学ぶためのGoプロジェクトです。このプロジェクトには、`pointer`パッケージを含むいくつかのパッケージがあります。`pointer`パッケージには2つのファイルが含まれています。
 
-- `pointerCase1.go`: A program that demonstrates how to use pointers in Go.
-- `pointerCase2.go`: A program that demonstrates how to use pointer receivers in Go.
+- `pointerCase1.go`: Goでポインタを使用する方法を示すプログラム。
+- `pointerCase2.go`: Goでポインタレシーバを使用する方法を示すプログラム。
 
-## Pointer Package
+## Pointerパッケージ
 
-The `pointer` package contains programs that demonstrate the use of pointers in Go. The following files are included:
+`pointer`パッケージには、Goでポインタを使用する方法を示すプログラムが含まれています。以下のファイルが含まれています。
 
-- `pointerCase1.go`: A program that demonstrates how to use pointers to store memory addresses.
-- `pointerCase2.go`: A program that demonstrates how to use pointer receivers to modify values.
+- `pointerCase1.go`: メモリアドレスを格納するためにポインタを使用する方法を示すプログラム。
+- `pointerCase2.go`: 値を変更するためにポインタレシーバを使用する方法を示すプログラム。
 
-Each file contains detailed comments that explain the purpose of the program and how it works.
+各ファイルには、プログラムの目的や動作方法について詳細なコメントが含まれています。
 
-To run these programs, navigate to the `pointer` directory and run `go run pointerCase1.go` or `go run pointerCase2.go` in the terminal.
-
+これらのプログラムを実行するには、`pointer`ディレクトリに移動し、ターミナルで`go run pointerCase1.go`または`go run pointerCase2.go`を実行してください。
