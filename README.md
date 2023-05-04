@@ -13,7 +13,8 @@
 - `pointerCase2.go`: 値を変更するためにポインタレシーバを使用する方法を示すプログラム。
 
 ### 'pointerCase1.go'
-    
+
+```Go
     package main
 
     import "fmt"
@@ -29,6 +30,7 @@
         fmt.Println("y value:\t", y)
         fmt.Println("y address:\t", &y)
     }
+```
 
     
 #### 説明
@@ -105,3 +107,55 @@ Trevor Sawler Birthdate: 0001-01-01 00:00:00 +0000 UTC
 
 
 このプログラムを通じて、Go言語で構造体とログ出力を扱う方法を学ぶことができました。
+
+## JasonデータをGoの構造体で表現する
+
+例えば、以下のようなJSONデータがあった場合、
+```Go
+{
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "zipcode": "10001"
+    }
+}
+```
+それと同様に、Go言語の構造体を使って、同じようなオブジェクトを表現することができます。
+
+```Go
+
+type Address struct {
+    Street  string `json:"street"`
+    City    string `json:"city"`
+    ZipCode string `json:"zipcode"`
+}
+
+type Person struct {
+    Name    string  `json:"name"`
+    Age     int     `json:"age"`
+    Address Address `json:"address"`
+}
+
+func main() {
+    person := Person{
+        Name: "John Doe",
+        Age:  30,
+        Address: Address{
+            Street:  "123 Main St",
+            City:    "New York",
+            ZipCode: "10001",
+        },
+    }
+
+    json, _ := json.Marshal(person)
+    fmt.Println(string(json))
+}
+```
+
+この例では、`Address`と`Person`構造体にjsonタグをつけています。jsonタグは、JSON形式でのキーの名前を指定するために使われます。
+
+main関数では、`Person`構造体の値をJSON形式にエンコードしています。`json.Marshal()`関数は、構造体の値をJSON形式にエンコードする関数で、戻り値はJSONデータを表すバイト配列になります。最後に、string(json)を使ってバイト配列を文字列に変換して出力しています。
+
+このように、Go言語の構造体とJSON形式は似ているため、Go言語の構造体をJSONデータに変換したり、JSONデータをGo言語の構造体に変換することができます。
