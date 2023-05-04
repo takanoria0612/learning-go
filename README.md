@@ -1,4 +1,4 @@
-# Learning Go
+# Goのポインタについて学ぶ
 
 これはGo言語の基本を学ぶためのGoプロジェクトです。このプロジェクトには、`pointer`パッケージを含むいくつかのパッケージがあります。`pointer`パッケージには2つのファイルが含まれています。
 
@@ -12,6 +12,22 @@
 - `pointerCase1.go`: メモリアドレスを格納するためにポインタを使用する方法を示すプログラム。
 - `pointerCase2.go`: 値を変更するためにポインタレシーバを使用する方法を示すプログラム。
 
-各ファイルには、プログラムの目的や動作方法について詳細なコメントが含まれています。
+### 'pointerCase1.go'
+    ```golang
+    package main
 
-これらのプログラムを実行するには、`pointer`ディレクトリに移動し、ターミナルで`go run pointerCase1.go`または`go run pointerCase2.go`を実行してください。
+    import "fmt"
+
+    func main() {
+        var x = 100
+        fmt.Println("x address:\t", &x)
+
+        var y *int
+        fmt.Println("y value:\t", y)
+        fmt.Println("y address:\t", &y)
+        y = &x
+        fmt.Println("y value:\t", y)
+        fmt.Println("y address:\t", &y)
+    }
+
+    ```
